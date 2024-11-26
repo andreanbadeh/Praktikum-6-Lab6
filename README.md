@@ -226,3 +226,11 @@ else:
     print("Pilihan tidak valid.")
 ```
 Jika pengguna memasukkan pilihan selain angka `1 hingga 5`, program akan menampilkan pesan `"Pilihan tidak valid."` dan kembali menampilkan menu.
+
+Code Program Tersebut:
+
+![gambar](https://github.com/andreanbadeh/Praktikum-6-Lab6/blob/6094a3460583a3ad6af9360343409bdc57f2a020/Image/tugas.png)
+
+Hasil Program Tersebut:
+
+![gambar](https://github.com/andreanbadeh/Praktikum-6-Lab6/blob/6094a3460583a3ad6af9360343409bdc57f2a020/Image/Screenshot%20from%202024-11-26%2015-31-05.png)
