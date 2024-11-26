@@ -110,4 +110,62 @@ if __name__ == "__main__":
         else:
             print("Pilihan tidak valid.")
 ```
+# Penjelasan Code
+```def tambah():
+    """Menambahkan data mahasiswa baru ke dalam daftar."""
+    nama = input("Masukkan nama mahasiswa: ")
+    if not nama.strip():
+        print("Nama tidak boleh kosong.")
+        return
+    try:
+        nilai = int(input("Masukkan nilai mahasiswa: "))
+    except ValueError:
+        print("Nilai harus berupa angka.")
+        return
+    daftar_mahasiswa[nama] = nilai
+    print("Data mahasiswa berhasil ditambahkan.")
+```
+Meminta pengguna untuk memasukkan nama mahasiswa. Jika nama kosong (hanya spasi), program akan mencetak pesan kesalahan dan keluar dari fungsi, menggunakan `try-except` untuk mencoba mengonversi nilai yang dimasukkan menjadi integer. Jika gagal, program mencetak pesan kesalahan, jika semua input valid, data mahasiswa (nama dan nilai) ditambahkan ke dalam dictionary `daftar_mahasiswa`, dan program mencetak pesan konfirmasi.
 
+```
+def tampilkan():
+    """Menampilkan semua data mahasiswa."""
+    if not daftar_mahasiswa:
+        print("Daftar mahasiswa kosong.")
+    else:
+        print("Daftar Mahasiswa:")
+        for nama, nilai in daftar_mahasiswa.items():
+            print(f"{nama}: {nilai}")
+```
+Fungsi ini menampilkan semua data mahasiswa yang ada dalam `daftar_mahasiswa` kosong, Jika tidak kosong, mencetak "Daftar Mahasiswa:" dan menggunakan loop untuk mencetak setiap nama mahasiswa dan nilai mereka dalam format `nama: nilai`.
+
+```
+def hapus(nama):
+    """Menghapus data mahasiswa berdasarkan nama."""
+    if nama in daftar_mahasiswa:
+        del daftar_mahasiswa[nama]
+        print(f"Data mahasiswa {nama} berhasil dihapus.")
+    else:
+        print(f"Data mahasiswa {nama} tidak ditemukan.")
+```
+Memeriksa apakah nama mahasiswa yang ingin dihapus ada dalam `daftar_mahasiswa`. Jika ada, data mahasiswa dihapus menggunakan `del`, dan mencetak pesan konfirmasi bahwa data berhasil dihapus. Jika tidak ada, mencetak pesan bahwa mahasiswa tersebut tidak ditemukan.
+
+```
+def ubah(nama):
+    """Mengubah data mahasiswa berdasarkan nama."""
+    if nama in daftar_mahasiswa:
+        try:
+            nilai_baru = int(input(f"Masukkan nilai baru untuk {nama}: "))
+            daftar_mahasiswa[nama] = nilai_baru
+            print(f"Data mahasiswa {nama} berhasil diubah.")
+        except ValueError:
+            print("Nilai harus berupa angka.")
+    else:
+        print(f"Data mahasiswa {nama} tidak ditemukan.")
+```
+Mengubah nilai mahasiswa berdasarkan nama yang diberikan, Memeriksa apakah nama mahasiswa ada dalam `daftar_mahasiswa`. Jika ada, meminta pengguna untuk memasukkan nilai baru dan mencoba mengonversinya menjadi `integer`. Jika konversi berhasil, nilai mahasiswa diperbarui dalam `dictionary`, dan mencetak pesan konfirmasi, Jika konversi gagal, mencetak pesan kesalahan. Jika nama tidak ditemukan, mencetak pesan bahwa mahasiswa tersebut tidak ditemukan.
+
+```
+daftar_mahasiswa = {}
+```
+`daftar_mahasiswa` adalah `dictionary` kosong yang akan digunakan untuk menyimpan `data mahasiswa`, dengan nama sebagai kunci dan nilai sebagai nilai.
