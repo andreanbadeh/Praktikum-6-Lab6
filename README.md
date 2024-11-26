@@ -31,3 +31,38 @@ Code Program Tersebut:
 Hasil Program Tersebut:
 
 ![gambar](https://github.com/andreanbadeh/Praktikum-6-Lab6/blob/fb30d09c48ba044f5734748e64a032b2b7695309/Image/Screenshot%20from%202024-11-26%2014-31-30.png)
+
+# Tugas Praktikum
+
+![gambar](https://github.com/andreanbadeh/Praktikum-6-Lab6/blob/51960f32fea99470328d5bd2c9917200d7532dc6/Image/Screenshot%20from%202024-11-26%2014-40-14.png)
+
+# Tugas praktikum.py
+```
+if __name__ == "__main__":
+    while True:
+        print("\nMenu:")
+        print("1. Tambah data")
+        print("2. Tampilkan data")
+        print("3. Hapus data")
+        print("4. Ubah data")
+        print("5. Keluar")
+
+        pilihan = input("Pilih menu (1-5): ")
+
+        if pilihan == '1':
+            tambah()
+        elif pilihan == '2':
+            tampilkan()
+        elif pilihan == '3':
+            nama = input("Masukkan nama mahasiswa yang ingin dihapus: ")
+            hapus(nama)
+        elif pilihan == '4':
+            nama = input("Masukkan nama mahasiswa yang ingin diubah: ")
+            ubah(nama)
+        elif pilihan == '5':
+            print("Terima kasih!")
+            break
+        else:
+            print("Pilihan tidak valid.")
+```
+
