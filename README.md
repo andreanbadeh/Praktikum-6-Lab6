@@ -169,3 +169,60 @@ Mengubah nilai mahasiswa berdasarkan nama yang diberikan, Memeriksa apakah nama 
 daftar_mahasiswa = {}
 ```
 `daftar_mahasiswa` adalah `dictionary` kosong yang akan digunakan untuk menyimpan `data mahasiswa`, dengan nama sebagai kunci dan nilai sebagai nilai.
+
+```
+if __name__ == "__main__":
+    while True:
+```
+`if __name__ == "__main__"` memastikan bahwa kode di dalam blok ini hanya dijalankan jika file ini dieksekusi langsung, bukan ketika diimpor sebagai modul oleh program lain. `while True` loop tak terbatas yang akan terus berjalan sampai perintah break dijalankan.
+
+```
+print("\nMenu:")
+print("1. Tambah data")
+print("2. Tampilkan data")
+print("3. Hapus data")
+print("4. Ubah data")
+print("5. Keluar")
+```
+Program mencetak menu dengan lima opsi yang dapat dipilih pengguna tersebut:
+1. Tambah data: untuk menambahkan data mahasiswa baru
+2. Tampilkan data: untuk menampilkan semua data mahasiswa yang telah dimasukkan
+3. Hapus data: Menghapus data mahasiswa berdasarkan nama
+4. Ubah data: Mengubah nilai mahasiswa berdasarkan nama
+5. Keluar: Keluar dari program
+
+```
+pilihan = input("Pilih menu (1-5): ")
+```
+Program meminta `input` dari pengguna untuk memilih salah satu menu (1-5).
+
+```
+if pilihan == '1':
+    tambah()
+elif pilihan == '2':
+    tampilkan()
+```
+Jika pengguna memilih 1, maka fungsi akan `tambah()`, Jika pengguna memilih 2, maka fungsi akan `tampilkan()` untuk menampilkan semua data mahasiswa yang ada dalam `daftar_mahasiswa`
+
+```
+elif pilihan == '3':
+    nama = input("Masukkan nama mahasiswa yang ingin dihapus: ")
+    hapus(nama)
+elif pilihan == '4':
+    nama = input("Masukkan nama mahasiswa yang ingin diubah: ")
+    ubah(nama)
+```
+Jika pengguna memilih 3, program akan meminta `input` nama mahasiswa yang ingin dihapus, Jika pengguna memilih 4, program akan meminta `input` nama mahasiswa yang ingin diubah.
+
+```
+elif pilihan == '5':
+    print("Terima kasih!")
+    break
+```
+Jika pengguna memilih 5, program akan mencetak pesan `"Terima kasih!"` dan keluar dari loop utama dengan menggunakan `break`.
+
+```
+else:
+    print("Pilihan tidak valid.")
+```
+Jika pengguna memasukkan pilihan selain angka `1 hingga 5`, program akan menampilkan pesan `"Pilihan tidak valid."` dan kembali menampilkan menu.
