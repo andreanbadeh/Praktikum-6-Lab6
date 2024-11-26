@@ -24,3 +24,10 @@ print("lambda b(3, 4):", b(3, 4))
 print("lambda c(1, 2, 3, 4, 5):", c(1, 2, 3, 4, 5))
 print("lambda d('hello andre'):", d("andre"))
 ```
+Code Program Tersebut:
+
+![gambar](https://github.com/andreanbadeh/Praktikum-6-Lab6/blob/fb30d09c48ba044f5734748e64a032b2b7695309/Image/latihan1.png)
+
+Hasil Program Tersebut:
+
+![gambar](https://github.com/andreanbadeh/Praktikum-6-Lab6/blob/fb30d09c48ba044f5734748e64a032b2b7695309/Image/Screenshot%20from%202024-11-26%2014-31-30.png)
